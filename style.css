@@ -154,7 +154,7 @@ nav {
         font-size: 18px;
         margin: 15px auto 0;
     }
-    
+
 }
 @media screen and (max-width: 500px) {
     .accueil {
@@ -174,11 +174,88 @@ nav {
         width: 130px;
         height: 45px;
         line-height: 45px;
-        font-size: 16px;       
+        font-size: 16px;
     }
     .logo-menu {
         top: 15px;
         width: 40px;
     }
-    
 }
+/* section asymétrique */
+.section-asymetrique {
+    display: grid;
+    grid-template: 200px repeat(3, auto) / 1fr 600px 1fr;
+    background: #f1f1f1;
+}
+.section-asymetrique h2{
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+/* placement des éléments */
+.bloc-1,
+.img-grid-1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.bloc-right,
+.img-grid-2 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.bloc-3,
+.img-grid-3 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.bloc {
+    background: #333;
+    color: #f1f1f1;
+    position: relative;
+    border-radius: 2px;
+    height: 750px;
+    margin-bottom: 250px;
+}
+.img-grid {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+.img-grid-1,
+.img-grid-3 {
+    top: 130px;
+    left: 20px;
+}
+.bloc-left {
+    left: -300px;
+}
+.bloc-txt-left {
+    width: 50%;
+    height: 100%;
+}
+.bloc-txt-left h3 {
+    white-space: nowrap;
+    font-size: 35px;
+    margin: 30px 15px;
+}
+.bloc-txt-left p {
+    line-height: 40px;
+    padding: 15px;
+}
+.bloc button {
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+    background: crimson;
+    border: 1px solid #333;
+    color: #f1f1f1;
+    padding: 20px 35px;
+    font-size: 20px;
+    margin: 35px auto;
+    cursor: pointer;
+    display: block;
+}
+/*reprendre à 12:30 */
